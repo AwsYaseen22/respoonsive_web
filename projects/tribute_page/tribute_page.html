@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        padding-top: 20px;
+      }
+      #main{
+        width: 80%;
+        margin: auto;
+        background-color: rgb(41, 41, 41);
+      }
+      #title-div{
+        width: 80%;
+        /* padding: 20px; */
+        /* background-color: blue; */
+        margin: auto;
+        padding-top: 3px;
+      }
+      #title{
+        padding-top: 10px;
+        /* line-height: 0.5; */
+        text-align: center;
+        font-size: 5vw;
+        /* background-color: black; */
+        color: rgb(92, 151, 92);
+        margin-bottom: 0px;
+      }
+
+      h3{
+        font-size: 2.5vw;
+      }
+      .subtitle{
+        font-size: 3vw;
+        text-align: center;
+        /* background-color: black; */
+        color: rgb(192, 240, 192);
+        margin-top: 0px;
+      }
+      .colored-word{
+        color: orange;
+        font-weight: bold;
+        font-style: italic;
+      }
+      #img-div{
+        /* margin: auto; */
+        /* background-color: green; */
+        border-radius: 30px;
+      }
+      #image {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        border-radius: 30px 30px 0px 0px;
+      }
+      figure{
+        padding-bottom: 10px;
+        /* background-color: red; */
+      }
+      #img-caption{
+        padding: 10px;
+        color: rgb(41, 41, 41);
+        background-color: rgb(197, 209, 197);
+        text-align: center;
+        font-size: 1.5vw;
+        border-radius: 0px 0px 30px 30px;
+      }
+
+      
+
+      #main-sections{
+        /* width: 90%; */
+        /* margin: auto; */
+        display: grid;
+        grid-template-columns: 60% 30%;
+        grid-template-rows: auto;
+        grid-template-areas: "left1 right1"
+                              "left2 right2"
+                             ;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        justify-content: center;
+        /* justify-items: start; */
+        margin-bottom: 20px;
+      }
+      .left1{
+        grid-area: left1;
+        background-color: rgb(92, 151, 92);
+        padding: 20px;
+        box-shadow: 0px 0px 10px grey;
+        border-radius: 30px;
+      }
+
+      .left2{
+        grid-area: left2;
+        padding: 20px;
+        box-shadow: 0px 0px 10px grey;
+        color: rgb(92, 151, 92);
+        border-radius: 30px;
+      }
+      
+      .right1{
+        grid-area: right1;
+        background-color: rgb(41, 41, 41);
+        color: rgb(92, 151, 92);
+        padding: 20px;
+        box-shadow: 0px 0px 10px grey;
+        border-radius: 30px;
+      }
+      .right2{
+        grid-area: right2;
+        background-color: rgb(92, 151, 92);
+        padding: 20px;
+        box-shadow: 0px 0px 10px grey;
+        border-radius: 30px;
+      }
+      #tribute-info{
+        /* background-color: lightsalmon; */
+        margin: auto;
+        /* width: 90%; */
+      }
+      .paragraph{
+        font-size: 1.4vw;
+      }
+
+      #tribute-link{
+        color: darkblue;
+      }
+
+      h4{
+        font-size: 2vw;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-left: 40px;
+      }
+
+      ul{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 1.5vw;
+      }
+
+      li{
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      footer{
+        background-color: grey;
+        padding: 20px;
+        /* text-align: center; */
+        width: 90%;
+        border-radius: 30px;
+        margin: 20px auto;
+
+      }
+
+      @media  (max-width: 800px){
+        #main-sections{
+        /* width: 90%; */
+        /* margin: auto; */
+        display: grid;
+        grid-template-columns: 90%;
+        grid-template-rows: auto;
+        grid-template-areas: "left1"
+                             "right1"
+                             "left2"
+                             "right2";
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        justify-content: center;
+        /* justify-items: start; */
+        margin-bottom: 20px;
+      }
+      }
+
+    </style>
+  </head>
+  <body>
+    <main id="main">
+      <header>
+        <div id="title-div">
+          <h1 id="title">
+            FREE CODE CAMP
+          </h1>
+          <p class="subtitle">help people learn to code for <span class="colored-word">free</span></p>
+        </div>
+        <figure id="img-div">
+          <!-- <img id="image" src="/tribute_page/assets/images/freecodecamp_image.png"/> -->
+          <!-- <img id="image" src="https://imgur.com/a/i8tpLep"/> -->
+          <img id="image" src="https://i.ibb.co/6bpRzb5/freecodecamp-image.png" alt="image the combine a camping in forest with the logo of freecodecamp and some code in the background of the"/>
+            <figcaption id="img-caption">
+              Best study combination of camping and coding
+            </figcaption>
+        </figure>
+      </header>
+      <div id="main-sections">
+        <section id="tribute-info" class="left1">
+          <h3>History</h3>
+          <p class="paragraph">freeCodeCamp was launched in October 2014 and incorporated as Free Code Camp, Inc. The founder, Quincy Larson, is a
+          software developer who took up programming after graduate school and created freeCodeCamp as a way to streamline a
+          student's progress from beginner to being job-ready.</p>
+          <p class="paragraph">The original curriculum focused on MongoDB, Express.js, AngularJS, and Node.js and was estimated to take 800 hours to
+          complete. Many of the lessons were links to free material on other platforms, such as Codecademy, Stanford, or Code
+          School. The course was broken up into “Waypoints” (quick, interactive tutorials), “Bonfires” (algorithm challenges),
+          “Ziplines” (front-end projects), and “Basejumps” (full-stack projects). Completing the front-end and full-stack projects
+          awarded the student with respective certificates.
+          The curriculum was updated in January 2016 to rely less on outside material, remove the unconventional section names,
+          and switch focus from AngularJS to React.js as the front-end library of choice. There were a number of additions to the
+          coursework, including D3.js and Sass, which brought the total time estimate to 2,080 hours and two more certificates,
+          data visualization, and back-end.</p>
+        </section>
+        <section class="left2">
+          <h3>Curriculum</h3>
+          <p class="paragraph">The self-paced curriculum involves 1,400 hours of interactive coding challenges and web development projects, plus
+          800 hours of contributing to open-source projects for nonprofits and is constantly expanded by more challenges and
+          projects. This translates into about one year of full-time coding. The curriculum is divided into Responsive Web
+          Design, JavaScript Algorithms and Data Structures, Front End Libraries, Data Visualization, APIs and Microservices, and
+          Information Security and Quality Assurance. Participants receive a certificate after completing each section.
+          The curriculum emphasizes pair programming, intended to foster a culture of collaboration and shared learning, which can
+          overcome a student's doubts about the adequacy of their skills (popularly referred to as “impostor syndrome”).
+          The languages and technologies currently taught by freeCodeCamp include HTML5, PHP, CSS 3, JavaScript, jQuery,
+          Bootstrap, Sass, React.js, Node.js, Python, Express.js, MongoDB, and Git.</p>
+        </section>
+        <section class="right1">
+          <h3>Quincy Larson Motivation</h3>
+          <p class="paragraph">freeCodeCamp is my effort to correct the extremely inefficient and circuitous way I learned to code. I'm committing my
+          career and the rest of my life towards making this process as efficient and painless as possible. All those things
+          that made learning to code a nightmare to me are things that we are trying to fix with freeCodeCamp.</p>
+        </section>
+        <section class="right2">
+          <h3>Quincy Larson</h3>
+          <p class="paragraph">Quincy Larson was a school director for six years before he started to learn to code so that he could create tools for
+          making schools more efficient. His own journey into learning to code was long and winding and he recognized the
+          need for a single-track curriculum for newbie developers. Upon analyzing data on coding boot camps in the US and
+          realizing how inaccessible coding education was to the masses, he set out to create a fully-online inclusive free
+          platform for peer-driven learning of coding - the result of which is freeCodeCamp.
+          He lives in Texas with his family and spends his time working on freeCodeCamp, writing and interviewing authors for the
+          freeCodeCamp publication, co-ordinating open source projects such as Chapter (a free MeetUp alternative), advocating
+          for a free and open internet and playing with his two young kids.</p>
+        </section>
+      </div>
+      <footer>
+        <h4>References:</h4>
+        <ul>
+          <li>wekipedia <a id="tribute-link" href="https://en.wikipedia.org/wiki/FreeCodeCamp" target="_blank">read more...</a></li>
+          <li>freeCodeCamp website: <a href="https://www.freecodecamp.org" target="_blank">visit</a></li>
+        </ul>
+      </footer>
+      <br>
+    </main>
+  </body>
+</html>
