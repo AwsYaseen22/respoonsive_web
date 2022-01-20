@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        background-image: url("https://images.unsplash.com/photo-1641652520432-6f8039fc4786?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MjY4MDE2Nw&ixlib=rb-1.2.1&q=85");
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: 100%;
+      }
+
+      .header-div{
+        margin-left: 20%;
+        margin-right: 20%;
+        border-radius: 30px;
+        background-color: rgba(27, 27, 63, 0.9);
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      #title{
+        text-align: center;
+        color: seashell;
+        font-size: 3vw;
+      }
+      #description{
+        text-align: center;
+        font-size: 2vw;
+        color: seashell;
+      }
+
+      #main{
+        margin: auto;
+        background-color: rgba(27, 27, 63, 0.9);
+        padding: 20px;
+        margin-left: 20%;
+        margin-right: 20%;
+        border-radius: 30px;
+        margin-top: 10px;
+      }
+      #survey-form{
+        font-size: 20px;
+        padding: 20px;
+        padding-right: 50px;
+      }
+      .full-width{
+        width: 100%;
+        box-sizing: content-box;
+      }
+      #name-label{
+        color: seashell;
+        margin-left: 15px;
+      }
+      #name{
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        padding: 10px;
+        padding-left: 15px;
+        border-radius: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      #email-label{
+        color: seashell;
+        margin-left: 15px;
+      }
+      #email{
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        padding: 10px;
+        padding-left: 15px;
+        border-radius: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      #age-label{
+        color: seashell;
+        margin-left: 15px;
+      }
+      #age{
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        padding: 10px;
+        padding-left: 15px;
+        border-radius: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      #dropdown-label{
+        color: seashell;
+        margin-left: 15px;
+      }
+      #dropdown{
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        padding: 10px;
+        padding-left: 15px;
+        border-radius: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      fieldset{
+        color: seashell;
+        border-radius: 30px;
+        padding: 20px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "left1 right1";
+        width: 95%;
+      }
+      
+      #radio-group1{
+        grid-area: left1;
+      }
+      #radio-group2{
+        grid-area: right1;
+      }
+      #checkbox-group1{
+        grid-area: left1;
+      }
+      #checkbox-group2{
+        grid-area: right1;
+      }
+      
+      #more-info-label{
+        color: seashell;
+        margin-left: 15px;
+      }
+
+      #more-info{
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 30px;
+        padding-left: 20px;
+        padding-top: 20px;
+      }
+
+      #submit{
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-size: 23px;
+        padding: 10px;
+        padding-left: 15px;
+        border-radius: 30px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: seashell;
+        background-color: green;
+        border-color: transparent;
+      }
+
+      @media  (max-width: 800px){
+        fieldset{
+          grid-template-columns: 100%;
+          grid-template-areas: "left1"
+                             "right1";
+        }
+        .header-div{
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+        #main{
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+        #survey-form{
+          font-size: 20px;
+          padding: 20px;
+          padding-right: 50px;
+        }
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <header class="header-div">
+      <h1 id="title">
+        freeCodeCamp Survey Form
+      </h1>
+      <p id="description">Thank you for taking the time to help us improve the platform</p>
+    </header>
+    <main id="main">
+      <form action="" id="survey-form">
+        <label for="name" id="name-label" class="full-width">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name here" class="full-width">
+
+        <label for="email" id="email-label" class="full-width">Email:</label>
+        <input type="email" name="email" id="email" required placeholder="Enter a valid email address" class="full-width">
+
+        <label for="age" id="age-label" class="full-width">Age:</label>
+        <input type="number" name="age" id="age" min="18" max="60" placeholder="Enter your age" class="full-width">
+
+        <label for="dropdown" id="dropdown-label" class="full-width">Choose one</label>
+        <select name="dropdown" id="dropdown" class="full-width">
+          <option value="">Please choose an option</option>
+          <option value="item1">Item 1</option>
+          <option value="item2">Item 2</option>
+        </select>
+
+        <fieldset>
+          <legend>Plase chose one:</legend>
+          <div id="radio-group1">
+            <input type="radio" name="radio-group" id="radio1" value="radio1">
+            <label for="radio1">Option 1</label>
+          </div>
+          <div id="radio-group2">
+            <input type="radio" name="radio-group" id="radio2" value="radio2">
+            <label for="radio2">Option 2</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Plase chose one or more:</legend>
+          <div id="checkbox-group1">
+            <input type="checkbox" name="checkbox-group" id="checkbox1" value="ckeckbox1">
+            <label for="checkbox1">Option 1</label>
+          </div>
+          <div id="checkbox-group2">
+            <input type="checkbox" name="checkbox-group" id="checkbox2" value="ckeckbox2">
+            <label for="checkbox2">Option 2</label>
+          </div>
+        </fieldset>
+
+        <label for="more-info" class="full-width" id="more-info-label">More info:</label>
+        <textarea name="more-info" id="more-info" cols="30" rows="10" class="full-width" placeholder="for more details....."></textarea>
+
+        <input type="submit" value="submit" id="submit"  class="full-width">
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
+
+
+<!-- 
+
+User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.
+
+User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.
+
+User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs.
+
+ -->
