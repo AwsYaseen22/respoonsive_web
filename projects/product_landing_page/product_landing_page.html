@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700">
+    <style>
+      body{
+        font-family: Lato;
+        width: 100%;
+      }
+      #header{
+        display: flex;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        background-color: lightgray;
+      }
+      #header-img{
+          width: auto;
+          height: 100px;
+      }
+      /* User Story #13: The navbar should always be at the top of the viewport. */
+      /* User Story #15: My product landing page should utilize CSS flexbox at least once. */
+      #nav-bar{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        height: 100px;
+      }
+      .nav-link{
+        margin: 0 1rem;
+        text-decoration: none;
+        text-align: end;
+        font-size: 1.8em;
+        color: rgb(29, 35, 58);
+        padding-bottom: 10px;
+      }
+      #main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        /* background-color: burlywood; */
+        margin: auto;
+        margin-top: 150px;
+      }
+      #main-title{
+        text-align: center;
+        font-size: 4em;
+        font-weight: lighter;
+        margin-top: 100px;
+        margin-bottom: 100px;
+      }
+      #form{
+        background-color: cadetblue;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #form-title{
+        text-align: center;
+        font-size: 1.6em;
+        color: rgb(29, 35, 58);
+      }
+      #email{
+        width: 30%;
+        font-size: 18px;
+        border-radius: 20px;
+        /* border: none; */
+        border: 1px solid darkkhaki;
+        /* border-color: darkkhaki; */
+        padding: 12px;
+        text-align: center;
+        margin: auto;
+      }
+      #submit{
+        width: 20%;
+        font-size: 18px;
+        border-radius: 20px;
+        border: none;
+        padding: 12px;
+        text-align: center;
+        margin: 15px auto;
+        background-color: rgb(29, 35, 58);
+        color: lightgoldenrodyellow;
+      }
+
+      .section{
+        /* background-color: lightgray; */
+        /* margin: 10px; */
+        display: flex;
+        flex-direction: row;
+        width: 99%;
+        /* border: 2px solid blue; */
+        border-radius: 10px;
+        padding: 5px;
+        box-shadow: 0px 0px 5px grey;
+        margin-bottom: 80px;
+      }
+      .section-details{
+        width: 49%;
+      }
+      .image-container{
+        background-color: transparent;
+        width: 49%;
+        margin: auto;
+      }
+      .section-image{
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+      }
+      .section-title{
+        margin-left: 20px;
+        font-size: 1.7em;
+      }
+      ul{
+        font-size: 1.2em;
+      }
+      ul>li{
+
+        color: green;
+      }
+      ul > p{
+        margin: 0px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      #video-title{
+        text-align: center;
+        margin-bottom: 0px;
+        font-size: 2em;
+        font-weight: lighter;
+      }
+      #video-container{
+        display: flex;
+        width: 60vw;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+      }
+      #video{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 700px; 
+        height: 393.4px;
+      }
+
+      #footer{
+        display: flex;
+        margin: auto;
+        width: 80%;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: end;
+        background-color: lightgray;
+      }
+
+      #b-nav-bar{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: end;
+        /* height: 100px; */
+        /* background-color: red; */
+        margin-top: 20px;
+      }
+      .b-nav-link{
+        margin: 10px 1rem;
+        text-decoration: none;
+        text-align: end;
+        font-size: 1.1em;
+        color: rgb(29, 35, 58);
+        background-color: lightslategray;
+        padding: 5px 10px;
+        border-radius: 10px;
+      }
+      #copyright{
+        /* text-align: end; */
+        /* background-color: greenyellow; */
+        margin-right: 20px;
+      }
+
+      /* User Story #14: My product landing page should have at least one media query. */
+      @media (max-width: 800px) {
+        #main{
+          width: 90%;
+          margin-top: 100px;
+        }
+        #nav-bar{
+          flex-direction: column;
+        }
+        .nav-link{
+          margin: 5px 10px;
+          font-size: 1.3em;
+          padding-bottom: 0px;
+        }
+        .section{
+          flex-direction: column;
+          background-color: transparent;
+          align-items: center;
+          width: 98%;
+          margin-bottom: 20px;
+        }
+        .section-details{
+          width: 100%;
+        }
+        .image-container{
+          width: 100%;
+          height: auto;
+        }
+        #video-container{
+          width: 90%;
+        }
+        #video{
+          width: 400px; 
+          height: 224.8px;
+        }
+        #form-title{
+          font-size: 1.3em;
+        }
+        #email{
+          width: 80%;
+        }
+        #submit{
+          width: 60%;
+        }
+        #footer{
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightgray;
+      }
+
+      .b-nav-link{
+        font-size: 1em;
+      }
+      #copyright{
+        font-size: .9em;
+        /* text-align: end; */
+        /* background-color: greenyellow; */
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- User Story #1: My product landing page should have a header element with a corresponding id="header". -->
+    <header id="header">
+      <!-- User Story #2: I can see an image within the header element with a corresponding id="header-img". A company logo would make a good image here. -->
+      <img
+        src="https://images.unsplash.com/photo-1621768216002-5ac171876625?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MjkzNzcwMw&ixlib=rb-1.2.1&q=85"
+        alt="company logo" id="header-img">
+      <!-- User Story #3: Within the #header element I can see a nav element with a corresponding id="nav-bar". -->
+      <nav id="nav-bar">
+        <!-- User Story #4: I can see at least three clickable elements inside the nav element, each with the class nav-link. -->
+        <!-- User Story #5: When I click a .nav-link button in the nav element, I am taken to the corresponding section of the landing page. -->
+        <a href="#main-title" class="nav-link">Details</a>
+        <a href="#video-title" class="nav-link">Review</a>
+        <a href="#form" class="nav-link">Connect</a>
+      </nav>
+    </header>
+    <main id="main">
+      <h1 id="main-title">A magical connection to your devices.</h1>
+      <!-- airpods 2 -->
+      <section class="section">
+        <div class="image-container">
+          <img
+            src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0Mjk2NTkxNQ&ixlib=rb-1.2.1&q=85"
+            alt="airpod2 image" class="section-image">
+        </div>
+        <div class="section-details">
+          <h3 class="section-title">AirPods (2nd generation)</h3>
+          <div id="section-desc">
+            <ul>
+              <li>Price: </li>
+              <p>129 USD</p>
+              <li>Spatial audio: </li>
+              <p>N/A</p>
+              <li>Noise Cancellation: </li>
+              <p>N/A</p>
+              <li>water resistant: </li>
+              <p>N/A</p>
+              <li>Charging: </li>
+              <p>Lightning charging</p>
+              <li>Listening time: </li>
+              <p>Up to 5 hours of Listening time with a single charge</p>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- airpods 3 -->
+      <section class="section">
+        <div class="image-container">
+          <img
+            src="https://images.unsplash.com/photo-1637090405848-5c0cd136b0ab?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0Mjk2NjAyNQ&ixlib=rb-1.2.1&q=85"
+            alt="airpod3 image" class="section-image">
+        </div>
+        <div class="section-details">
+          <h3 class="section-title">AirPods (2nd generation)</h3>
+          <div id="section-desc">
+            <ul>
+              <li>Price: </li>
+              <p>179 USD</p>
+              <li>Spatial audio: </li>
+              <p>Spatial audio with dynamic head tracking</p>
+              <li>Noise Cancellation: </li>
+              <p>N/A</p>
+              <li>water resistant: </li>
+              <p>Sweat and water resistant</p>
+              <li>Charging: </li>
+              <p>MagSafe, wireless, and Lightning charging</p>
+              <li>Listening time: </li>
+              <p>Up to 6 hours of Listening time with a single charge</p>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- airpods pro -->
+      <section class="section">
+        <div class="image-container">
+          <img
+            src="https://images.unsplash.com/photo-1606741965429-8d76ff50bb2f?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0Mjk2OTg1Nw&ixlib=rb-1.2.1&q=85"
+            alt="airpods pro image" class="section-image">
+        </div>
+        <div class="section-details">
+          <h3 class="section-title">AirPods (Pro generation)</h3>
+          <div id="section-desc">
+            <ul>
+              <li>Price: </li>
+              <p>249 USD</p>
+              <li>Spatial audio: </li>
+              <p>Spatial audio with dynamic head tracking</p>
+              <li>Noise Cancellation: </li>
+              <p>Active Noise Cancellation and Transparency mode</p>
+              <li>water resistant: </li>
+              <p>Sweat and water resistant</p>
+              <li>Charging: </li>
+              <p>MagSafe, wireless, and Lightning charging</p>
+              <li>Listening time: </li>
+              <p>Up to 4.5 hours of Listening time with a single charge</p>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- airpods pro -->
+      <section class="section">
+        <div class="image-container">
+          <img
+            src="https://images.unsplash.com/photo-1636612680772-59425356da80?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0Mjk3MDE4Ng&ixlib=rb-1.2.1&q=85"
+            alt="airpods Max image" class="section-image">
+        </div>
+        <div class="section-details">
+          <h3 class="section-title">AirPods (Max generation)</h3>
+          <div id="section-desc">
+            <ul>
+              <li>Price: </li>
+              <p>549 USD</p>
+              <li>Spatial audio: </li>
+              <p>Spatial audio with dynamic head tracking</p>
+              <li>Noise Cancellation: </li>
+              <p>Active Noise Cancellation and Transparency mode</p>
+              <li>water resistant: </li>
+              <p>N/A</p>
+              <li>Charging: </li>
+              <p>Lightning charging</p>
+              <li>Listening time: </li>
+              <p>Up to 20 hours of Listening time with a single charge</p>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <!-- User Story #6: I can watch an embedded product video with id="video". -->
+      <h2 id="video-title">Products preview</h2>
+      <div id="video-container">
+        <iframe src="https://www.youtube.com/embed/zFy2TwKKw6Y?autoplay=1&mute=1" title="Apple airpods types"
+            frameborder="0" allow="accelerometer; autoplay;" id="video"></iframe>
+      </div>
+      
+      <!-- User Story #7: My landing page has a form element with a corresponding id="form". -->
+      <form action="https://www.freecodecamp.com/email-submit" id="form">
+        <!-- User Story #8: Within the form, there is an input field with id="email" where I can enter an email address. -->
+        <!-- User Story #9: The #email input field should have placeholder text to let the user know what the field is for. -->
+        <!-- User Story #10: The #email input field uses HTML5 validation to confirm that the entered text is an email address. -->
+        <h3 id='form-title'>
+          Enter your email to recieve monthly update
+        </h3>
+        <input type="email" name="email" id="email" placeholder="Enter your email address">
+        <!-- User Story #11: Within the form, there is a submit input with a corresponding id="submit". -->
+        <!-- User Story #12: When I click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit). -->
+        <input type="submit" value="Submit" id="submit">
+      </form>
+    </main>
+    <footer id="footer">
+      <nav id="b-nav-bar">
+        <a href="#" class="b-nav-link">Link1</a>
+        <a href="#" class="b-nav-link">Link2</a>
+        <a href="#" class="b-nav-link">Connect</a>
+      </nav>
+      <p id="copyright">Copyright 2022, Aws Yaseen 22</p>
+    </footer>
+  </body>
+</html>
+
